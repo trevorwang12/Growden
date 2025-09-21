@@ -1,9 +1,8 @@
 'use client'
 
 import { useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
 import Link from "next/link"
-import { Gamepad2, Search } from "lucide-react"
+import { Gamepad2 } from "lucide-react"
 
 interface SEOSettings {
   siteName?: string
@@ -11,12 +10,10 @@ interface SEOSettings {
 }
 
 export default function Header() {
-  const [searchTerm, setSearchTerm] = useState("")
   const [seoSettings, setSeoSettings] = useState<SEOSettings>({
     siteName: 'GAMES',
     siteDescription: 'Best Online Gaming Platform'
   })
-  const router = useRouter()
 
   useEffect(() => {
     const loadSEOSettings = async () => {
@@ -50,13 +47,6 @@ export default function Header() {
     }
   }, [])
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (searchTerm.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchTerm.trim())}`)
-    }
-  }
-
   return (
     <header className="bg-white border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-4 py-3">
@@ -77,16 +67,6 @@ export default function Header() {
             <Link href="/hot-games" className="text-gray-600 hover:text-blue-600 text-sm font-medium">
               Hot Games
             </Link>
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                type="text"
-                placeholder="Search games..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="border border-gray-300 rounded-md pl-3 pr-8 py-1 text-sm w-48 focus:outline-none focus:border-blue-600"
-              />
-              <Search className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
-            </form>
           </nav>
         </div>
       </div>

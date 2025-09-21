@@ -18,6 +18,12 @@ class FeaturedGamesManager {
     // No client-side initialization needed
   }
 
+  private dispatchUpdateEvent() {
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('featuredGamesUpdated'))
+    }
+  }
+
   private async loadFromAPI(): Promise<FeaturedGame[]> {
     try {
       const response = await fetch('/api/featured-games')
@@ -52,7 +58,9 @@ class FeaturedGamesManager {
         body: JSON.stringify(gameData)
       })
       if (response.ok) {
-        return await response.json()
+        const created = await response.json()
+        this.dispatchUpdateEvent()
+        return created
       }
     } catch (error) {
       console.error('Error creating featured game:', error)
@@ -68,7 +76,9 @@ class FeaturedGamesManager {
         body: JSON.stringify({ gameId: id, updates })
       })
       if (response.ok) {
-        return await response.json()
+        const updated = await response.json()
+        this.dispatchUpdateEvent()
+        return updated
       }
     } catch (error) {
       console.error('Error updating featured game:', error)
@@ -81,6 +91,9 @@ class FeaturedGamesManager {
       const response = await fetch(`/api/admin/featured-games?id=${id}`, {
         method: 'DELETE'
       })
+      if (response.ok) {
+        this.dispatchUpdateEvent()
+      }
       return response.ok
     } catch (error) {
       console.error('Error deleting featured game:', error)
@@ -158,6 +171,7 @@ class FeaturedGamesManager {
 
   async reorderFeaturedGame(gameId: string, direction: 'up' | 'down'): Promise<boolean> {
     // Simplified reorder - in real implementation would handle priority properly
+    this.dispatchUpdateEvent()
     return true
   }
 

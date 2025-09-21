@@ -119,6 +119,12 @@ class HomepageManager {
     this.content = this.getDefaultContent()
   }
 
+  private dispatchUpdateEvent() {
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('homepageUpdated'))
+    }
+  }
+
   private async loadFromAPI(): Promise<HomepageContent> {
     try {
       const response = await fetch('/api/homepage')
@@ -303,6 +309,9 @@ class HomepageManager {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action: 'save', content })
       })
+      if (response.ok) {
+        this.dispatchUpdateEvent()
+      }
       return response.ok
     } catch (error) {
       console.error('Error saving homepage content:', error)
@@ -318,6 +327,9 @@ class HomepageManager {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ section: sectionName, updates })
       })
+      if (response.ok) {
+        this.dispatchUpdateEvent()
+      }
       return response.ok
     } catch (error) {
       console.error('Error updating homepage section:', error)
@@ -341,6 +353,9 @@ class HomepageManager {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ section: 'sectionOrder', updates: newOrder })
       })
+      if (response.ok) {
+        this.dispatchUpdateEvent()
+      }
       return response.ok
     } catch (error) {
       console.error('Error updating section order:', error)
@@ -349,15 +364,15 @@ class HomepageManager {
   }
 
   // Specific update methods
-  updateNewGamesLimit(limit: number): boolean {
+  updateNewGamesLimit(limit: number): Promise<boolean> {
     return this.updateSection('newGames', { limit })
   }
 
-  updateFeaturesSection(features: any): boolean {
+  updateFeaturesSection(features: any): Promise<boolean> {
     return this.updateSection('features', features)
   }
 
-  updateFAQ(questions: { question: string, answer: string }[]): boolean {
+  updateFAQ(questions: { question: string, answer: string }[]): Promise<boolean> {
     return this.updateSection('faq', { questions })
   }
 
@@ -369,6 +384,9 @@ class HomepageManager {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action: 'reset' })
       })
+      if (response.ok) {
+        this.dispatchUpdateEvent()
+      }
       return response.ok
     } catch (error) {
       console.error('Error resetting to defaults:', error)

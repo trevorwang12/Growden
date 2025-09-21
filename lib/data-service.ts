@@ -129,6 +129,11 @@ export class DataService {
     return allGames.find(game => game.id === gameId) || null
   }
 
+  static async getFeaturedGames(): Promise<any[]> {
+    const defaultFeatured: any[] = []
+    return this.loadFromFile('featured-games.json', defaultFeatured)
+  }
+
   static async getCategories() {
     return this.loadFromFile<any[]>('categories.json', [])
   }

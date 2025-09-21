@@ -104,6 +104,9 @@ export default function SiteConfigManager() {
       if (response.ok) {
         showAlert('success', 'Site configuration saved successfully!')
         await loadCurrentConfig() // 重新加载配置
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(new CustomEvent('seoSettingsUpdated'))
+        }
       } else {
         throw new Error('Failed to save configuration')
       }

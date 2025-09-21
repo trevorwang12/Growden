@@ -75,6 +75,12 @@ class SEOManager {
     this.categoryPageSEO = this.getDefaultCategoryPageSEO()
   }
 
+  private dispatchUpdateEvent() {
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('seoSettingsUpdated'))
+    }
+  }
+
   private async loadFromAPI(): Promise<{seoSettings: SEOSettings, gamePageSEO: GamePageSEO, categoryPageSEO: CategoryPageSEO}> {
     try {
       const response = await fetch('/api/admin/seo')
@@ -187,6 +193,9 @@ Sitemap: https://yourgamesite.com/sitemap.xml`,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type: 'seoSettings', updates: settings })
       })
+      if (response.ok) {
+        this.dispatchUpdateEvent()
+      }
       return response.ok
     } catch (error) {
       console.error('Error updating SEO settings:', error)
@@ -201,6 +210,9 @@ Sitemap: https://yourgamesite.com/sitemap.xml`,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type: 'gamePageSEO', updates: settings })
       })
+      if (response.ok) {
+        this.dispatchUpdateEvent()
+      }
       return response.ok
     } catch (error) {
       console.error('Error updating game page SEO:', error)
@@ -215,6 +227,9 @@ Sitemap: https://yourgamesite.com/sitemap.xml`,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type: 'categoryPageSEO', updates: settings })
       })
+      if (response.ok) {
+        this.dispatchUpdateEvent()
+      }
       return response.ok
     } catch (error) {
       console.error('Error updating category page SEO:', error)
