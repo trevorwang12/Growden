@@ -16,7 +16,6 @@ import GamePlayer from '@/components/GamePlayer'
 import GameGallery from '@/components/GameGallery'
 import YouMightAlsoLike from '@/components/YouMightAlsoLike'
 import InstantSearch from '@/components/InstantSearch'
-import SEOHead from '@/components/SEOHead'
 import PageH1 from '@/components/PageH1'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -223,9 +222,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* SEO Head Component */}
-      <SEOHead pageType="home" />
-      
       {/* Header */}
       <Header />
       

@@ -136,17 +136,17 @@ export class DataService {
   static async getSeoSettings() {
     const defaultSettings = {
       seoSettings: {
-        siteName: 'GAMES',
-        siteDescription: 'Best Online Gaming Platform - Play hundreds of free browser games',
-        siteUrl: 'https://yourgamesite.com',
-        siteLogo: '/placeholder-logo.png',
+        siteName: 'Growden.io Free Play Grow A Garden',
+        siteDescription: 'Grow a Garden in Growden.io! You can grow a garden of your dreams and unlock pets to help you grow a garden.',
+        siteUrl: 'https://growden.net',
+        siteLogo: '/favicon.svg',
         favicon: '/favicon.ico',
-        keywords: ['online games', 'browser games', 'free games'],
-        author: 'Gaming Platform',
-        twitterHandle: '@yourgames',
+        keywords: ['Growden', 'browser games', 'free games', 'HTML5 games', 'casual games'],
+        author: 'Growden.io',
+        twitterHandle: '@growden',
         ogImage: '/og-image.png',
-        ogTitle: 'GAMES - Best Free Online Games',
-        ogDescription: 'Play the best free online games. No download required!',
+        ogTitle: 'Growden.io Free Play Grow A Garden',
+        ogDescription: 'Grow a Garden in Growden.io! Play free online games.',
         metaTags: {
           viewport: 'width=device-width, initial-scale=1.0',
           themeColor: '#475569'

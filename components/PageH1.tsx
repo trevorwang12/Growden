@@ -21,13 +21,13 @@ export default function PageH1({ pageType, template, data = {}, className = '' }
   const getFallbackTitle = () => {
     switch (pageType) {
       case 'homepage':
-        return `${data.siteName || 'GAMES'} - Best Free Online Games`
+        return `${data.siteName || 'Growden.io Free Play Grow A Garden'} - Best Free Online Games`
       case 'gamePage':
         return data.gameName || 'Game'
       case 'categoryPage':
         return `${data.categoryName || 'Category'} Games`
       default:
-        return data.siteName || 'GAMES'
+        return data.siteName || 'Growden.io Free Play Grow A Garden'
     }
   }
 
@@ -76,7 +76,7 @@ export default function PageH1({ pageType, template, data = {}, className = '' }
             text = headingStructure.categoryPage?.h1 || '{categoryName} Games'
             break
           default:
-            text = data.siteName || 'GAMES'
+            text = data.siteName || 'Growden.io Free Play Grow A Garden'
         }
       } else {
         // 如果没有headingStructure配置，使用默认模板
@@ -91,14 +91,14 @@ export default function PageH1({ pageType, template, data = {}, className = '' }
             text = '{categoryName} Games'
             break
           default:
-            text = data.siteName || 'GAMES'
+            text = data.siteName || 'Growden.io Free Play Grow A Garden'
         }
       }
     }
     
     // 替换占位符
     if (text) {
-      text = text.replace('{siteName}', data.siteName || 'GAMES')
+      text = text.replace('{siteName}', data.siteName || 'Growden.io Free Play Grow A Garden')
       text = text.replace('{gameName}', data.gameName || 'Game')
       text = text.replace('{categoryName}', data.categoryName || 'Category')
     }

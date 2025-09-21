@@ -13,6 +13,8 @@ import { CriticalCSS } from '@/components/CriticalCSS'
 import { DeferredCSS, PreloadResources } from '@/components/DeferredCSS'
 import './globals.css'
 
+export const dynamic = 'force-dynamic'
+
 // "Simplicity is the ultimate sophistication." - Leonardo (Linus would approve)
 export async function generateMetadata(): Promise<Metadata> {
   return SeoService.generateMetadata()

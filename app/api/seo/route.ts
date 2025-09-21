@@ -4,11 +4,11 @@ import path from 'path'
 
 const DEFAULT_SEO = {
   seoSettings: {
-    siteName: 'GAMES',
-    siteDescription: 'Best Online Gaming Platform',
-    siteKeywords: 'games, online games, free games',
-    siteAuthor: 'GAMES Team',
-    ogImage: '/og-image.jpg',
+    siteName: 'Growden.io Free Play Grow A Garden',
+    siteDescription: 'Grow a Garden in Growden.io! You can grow a garden of your dreams and unlock pets to help you grow a garden.',
+    siteKeywords: 'Growden, browser games, free games, HTML5 games, casual games',
+    siteAuthor: 'Growden.io Team',
+    ogImage: '/og-image.png',
     twitterCard: 'summary_large_image',
     favicon: '/favicon.ico'
   }

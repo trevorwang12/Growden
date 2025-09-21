@@ -132,7 +132,6 @@ gametemplate/
 │   ├── HomepageManager.tsx       # Homepage content management component | 首页内容管理组件
 │   ├── AboutManager.tsx          # About Us content management component | About Us内容管理组件
 │   ├── SEOManager.tsx            # SEO settings management component | SEO设置管理组件
-│   ├── SEOHead.tsx               # Client-side SEO updates component | 客户端SEO更新组件
 │   ├── Header.tsx                # Reusable header component with dynamic site name | 可重用页头组件支持动态站点名称
 │   ├── Footer.tsx                # Reusable footer component with dynamic content | 可重用页脚组件支持动态内容
 │   └── AdSlot.tsx                # Advertisement slot component with real-time updates | 广告位组件支持实时更新
