@@ -15,6 +15,12 @@ class AdManager {
     // No client-side initialization needed
   }
 
+  private dispatchUpdateEvent() {
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('adsUpdated'))
+    }
+  }
+
   private async loadFromAPI(): Promise<AdSlot[]> {
     try {
       const response = await fetch('/api/ads')
@@ -64,7 +70,9 @@ class AdManager {
         body: JSON.stringify(adData)
       })
       if (response.ok) {
-        return await response.json()
+        const created = await response.json()
+        this.dispatchUpdateEvent()
+        return created
       }
     } catch (error) {
       console.error('Error creating ad:', error)
@@ -80,7 +88,9 @@ class AdManager {
         body: JSON.stringify({ adId: id, updates })
       })
       if (response.ok) {
-        return await response.json()
+        const updated = await response.json()
+        this.dispatchUpdateEvent()
+        return updated
       }
     } catch (error) {
       console.error('Error updating ad:', error)
@@ -93,6 +103,9 @@ class AdManager {
       const response = await fetch(`/api/admin/ads?id=${id}`, {
         method: 'DELETE'
       })
+      if (response.ok) {
+        this.dispatchUpdateEvent()
+      }
       return response.ok
     } catch (error) {
       console.error('Error deleting ad:', error)

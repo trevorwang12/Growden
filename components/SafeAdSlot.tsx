@@ -27,10 +27,20 @@ export default function SafeAdSlot({ position, className = '' }: AdSlotProps) {
   const hasLoaded = useRef(false)
   
   useEffect(() => {
-    if (hasLoaded.current) return
-    hasLoaded.current = true
-    
-    loadAdData()
+    if (!hasLoaded.current) {
+      hasLoaded.current = true
+      loadAdData()
+    }
+
+    const handleAdsUpdate = () => {
+      loadAdData()
+    }
+
+    window.addEventListener('adsUpdated', handleAdsUpdate)
+
+    return () => {
+      window.removeEventListener('adsUpdated', handleAdsUpdate)
+    }
   }, [position])
   
   const loadAdData = async () => {

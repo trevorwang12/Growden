@@ -733,7 +733,7 @@ Real-time updates between admin panel and frontend pages occur automatically thr
 
 通过自定义事件系统实现管理面板和前端页面之间的实时更新：
 
-- **Custom Events | 自定义事件**: Components dispatch and listen to update events such as `seoSettingsUpdated`, `homepageUpdated`, `featuredGamesUpdated`, `gamesUpdated`, and `friendlyLinksUpdated`. Each admin save emits the corresponding event so listening components refresh themselves. | 组件会调度并监听 `seoSettingsUpdated`、`homepageUpdated`、`featuredGamesUpdated`、`gamesUpdated`、`friendlyLinksUpdated` 等更新事件，管理员保存后会触发相应事件从而自动刷新组件。
+- **Custom Events | 自定义事件**: Components dispatch and listen to update events such as `seoSettingsUpdated`, `homepageUpdated`, `featuredGamesUpdated`, `gamesUpdated`, `adsUpdated`, and `friendlyLinksUpdated`. Each admin save emits the corresponding event so listening components refresh themselves. | 组件会调度并监听 `seoSettingsUpdated`、`homepageUpdated`、`featuredGamesUpdated`、`gamesUpdated`、`adsUpdated`、`friendlyLinksUpdated` 等更新事件，管理员保存后会触发相应事件从而自动刷新组件。
 - **Cross-tab Synchronization | 跨标签页同步**: Events propagate across browser tabs for consistent state without manual reloads. | 事件在浏览器标签页间传播以保持状态一致，无需手动刷新。
 - **Automatic Refresh | 自动刷新**: Header, footer, homepage sections, featured hero, and sidebars re-fetch data immediately after admin updates. | 页头、页脚、首页板块、推荐位与侧栏会在管理员更新后立即重新获取数据。
 - **No Polling Required | 无需轮询**: Event-driven updates eliminate resource-intensive polling and keep latency near zero. | 事件驱动更新免去了高成本的轮询机制，并将延迟降到接近零。
