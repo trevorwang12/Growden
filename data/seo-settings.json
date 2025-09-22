@@ -4,8 +4,8 @@
     "siteName": "Growden.io Free Play Grow A Garden ",
     "siteDescription": "Grow a Garden in Growden.io! You can grow a garden of your dreams and unlock pets to help you grow a garden. ",
     "siteUrl": "https://growden.net",
-    "siteLogo": "/uploads/seo-settings-1758076728367-dmso2v.webp",
-    "favicon": "/uploads/seo-settings-1758076728387-ppc06e.webp",
+    "siteLogo": "/favicon.svg",
+    "favicon": "/favicon.ico",
     "keywords": [
       "Growden",
       "browser games",
@@ -15,8 +15,8 @@
       "casual games"
     ],
     "author": "",
-    "twitterHandle": "Grow a Garden in Growden.io!",
-    "ogImage": "/uploads/seo-settings-1758076728418-n6pqm6.webp",
+    "twitterHandle": "@growden",
+    "ogImage": "/favicons/favicon.png",
     "ogTitle": "Growden.io- Best Free Online Games",
     "ogDescription": "Grow a Garden in Growden.io!",
     "robotsTxt": "User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /api/\n\nSitemap:https://growden.net/sitemap.xml",
@@ -25,13 +25,13 @@
       "organizationType": "WebSite",
       "organizationName": "Growden.io",
       "organizationUrl": "https://Growden.net",
-      "organizationLogo": "/uploads/seo-settings-1758076728435-bs1vp8.webp",
+      "organizationLogo": "/favicon-48.png",
       "sameAs": []
     },
     "metaTags": {
       "viewport": "width=device-width, initial-scale=1.0",
       "themeColor": "#475569",
-      "appleMobileWebAppTitle": "GAMES",
+      "appleMobileWebAppTitle": "Growden",
       "appleMobileWebAppCapable": "yes"
     },
     "createdAt": "2025-08-29T11:10:41.564Z",
