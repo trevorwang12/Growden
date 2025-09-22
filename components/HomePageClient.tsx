@@ -469,6 +469,11 @@ export default function HomePageClient({
               )}
             </div>
 
+            {/* Hero bottom ad slot */}
+            <div className="mb-10">
+              <AdSlot position="hero-bottom" className="max-w-7xl mx-auto" />
+            </div>
+
             {/* Hot Games Section */}
             <section className="mb-10">
               <div className="flex items-center justify-between mb-4">
