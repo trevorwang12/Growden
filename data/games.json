@@ -976,5 +976,98 @@
     "addedDate": "2025-09-17",
     "viewCount": 0,
     "playCount": 0
+  },
+  {
+    "name": "Choir",
+    "description": "Unleash your inner maestro in Choir, a delightfully silly music game where you control a cast of quirky singers. The gameplay is brilliantly simple: just tap or drag to open and close each character's mouth. Every movement coaxes a unique sound from them, allowing you to blend their voices into spontaneous, hilarious, and surprisingly catchy melodies.\n\nThe true magic of Choir is the joy of discovery. Experiment with different combinations to create unexpected harmonies and laugh-out-loud tunes. With its charming characters and infectious sounds, it’s the perfect, lighthearted escape to help you relax and smile after a long day.",
+    "gradientDescription": "Unleash your inner maestro in Choir",
+    "thumbnailUrl": "/uploads/1758615277684-pcyb56-PixPin_2025-09-23_16-14-23.webp",
+    "category": "simulation",
+    "tags": [
+      "simulation"
+    ],
+    "rating": 4.4,
+    "developer": "",
+    "releaseDate": "2025",
+    "gameType": "iframe",
+    "gameUrl": "https://d21u3ic0kp9e91.cloudfront.net/choir/04/index.html",
+    "externalUrl": "",
+    "embedCode": "",
+    "controls": [],
+    "platforms": [
+      "web"
+    ],
+    "languages": [
+      "en"
+    ],
+    "features": [],
+    "isActive": true,
+    "isFeatured": false,
+    "id": "choir",
+    "addedDate": "2025-09-23",
+    "viewCount": 0,
+    "playCount": 0
+  },
+  {
+    "name": "dazOS Clicker",
+    "description": "Have you ever dreamed of climbing the corporate ladder and running the whole show? In dazOS_Clicker, you'll start your career at the bottom, handling emails and minor tasks. But every click is a step towards the top.\n\nStrategically invest your earnings to unlock powerful upgrades, hire a talented team to automate your workflow, and expand your business operations. Rise through the ranks in a rewarding promotion system, transforming your humble desk into the CEO's corner office. This isn't just a game; it's your chance to build a corporate empire from the ground up, even while you're away.",
+    "gradientDescription": "Have you ever dreamed of climbing the corporate ladder and running the whole show?",
+    "thumbnailUrl": "/uploads/1758615575018-06b7k7-PixPin_2025-09-23_16-19-25.webp",
+    "category": "strategy",
+    "tags": [
+      "clicker"
+    ],
+    "rating": 4,
+    "developer": "",
+    "releaseDate": "2025",
+    "gameType": "iframe",
+    "gameUrl": "https://html-classic.itch.zone/html/14280359/index.html",
+    "externalUrl": "",
+    "embedCode": "",
+    "controls": [],
+    "platforms": [
+      "web"
+    ],
+    "languages": [
+      "en"
+    ],
+    "features": [],
+    "isActive": true,
+    "isFeatured": false,
+    "id": "dazos-clicker",
+    "addedDate": "2025-09-23",
+    "viewCount": 0,
+    "playCount": 0
+  },
+  {
+    "name": "Frog Clicker",
+    "description": "Ever wonder if a tiny frog could lead a mighty legion? In Frog Clicker, you’ll find out! This isn’t just another clicker game; it’s a delightful adventure where every tap hatches a new frog brimming with personality, beginning an unexpected and adorable journey.\n\nThe gameplay is as relaxing as a lily pad on a calm pond. Simply click or tap your screen to expand your frog family. There’s no pressure, no complicated quests—just the pure, simple joy of watching your screen fill with an army of amphibians in all sorts of hilarious shapes and costumes.\n\nBut every click holds a secret! You might discover a frog wearing a tiny crown, another sporting a wizard’s hat, or even one with silly horns. The more you play, the more unique and wonderful your collection becomes, making every moment a fresh and captivating surprise.",
+    "gradientDescription": "Ever wonder if a tiny frog could lead a mighty legion?",
+    "thumbnailUrl": "/uploads/1758615686646-0iifwn-PixPin_2025-09-23_16-21-14.webp",
+    "category": "strategy",
+    "tags": [
+      "clicker"
+    ],
+    "rating": 4.2,
+    "developer": "",
+    "releaseDate": "2025",
+    "gameType": "iframe",
+    "gameUrl": "https://html-classic.itch.zone/html/12390533/Frog%20Clicker%20WebGL/index.html",
+    "externalUrl": "",
+    "embedCode": "",
+    "controls": [],
+    "platforms": [
+      "web"
+    ],
+    "languages": [
+      "en"
+    ],
+    "features": [],
+    "isActive": true,
+    "isFeatured": false,
+    "id": "frog-clicker",
+    "addedDate": "2025-09-23",
+    "viewCount": 0,
+    "playCount": 0
   }
 ]
